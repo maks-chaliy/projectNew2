@@ -1,0 +1,41 @@
+//=============/=============/=============
+.menu {
+	&__item {
+		padding: var(--offset-minimum) 0;
+		transition: color 0.3s, transform 0.3s linear;
+
+		&:hover {
+			.menu__name {
+				color: var(--pumpkin-color);
+				transform: scaleY(1.8);
+			}
+
+			.menu__icon {
+				fill: var(--pumpkin-color);
+				transform: scaleY(1.8);
+			}
+		}
+	}
+
+	&__link {
+		@include flex-h-center;
+	}
+
+	&__icon {
+		width: 26px;
+		height: 26px;
+		margin-right: var(--offset-small);
+		fill: var(--white-color);
+		transition: color 0.3s, transform 0.3s linear;
+	}
+
+	&__name {
+		color: var(--white-color);
+		font-weight: 700;
+		transition: color 0.3s, transform 0.3s linear;
+
+		@include mobile {
+			font-size: 14px;
+		}
+	}
+}

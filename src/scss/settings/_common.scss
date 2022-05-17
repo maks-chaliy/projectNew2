@@ -1,0 +1,98 @@
+//=============/=============/=============
+/*
+burger: z-index: 110;
+modal: z-index: 120;
+modal__btn_close: z-index: 123;
+slider-popular__btns: z-index: 2;
+slider-productModal__btn: z-index: 122;
+*/
+
+//=============/=============/=============
+.site-container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	max-width: 1250px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+.btn-reset {
+	border: none;
+	outline: none;
+	padding: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.input-reset {
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	border-radius: 0;
+	background-color: #fff;
+
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		display: none;
+	}
+}
+
+.section-vertical-offset {
+	margin-top: var(--offset-maximum);
+	margin-bottom: var(--offset-maximum);
+
+	@include tablet {
+		margin-top: var(--offset-huge);
+		margin-bottom: var(--offset-huge);
+	}
+
+	@include mobile {
+		margin-top: var(--offset-large);
+		margin-bottom: var(--offset-large);
+	}
+}
+
+
+//- стили для scrollbar
+//- по умолчанию для всего сайта
+//- для определенного блока нужно подставить класс этого блока
+// &::-webkit-scrollbar {
+// 	width: 5px;
+// }
+
+// &::-webkit-scrollbar-track {
+// 	background: #ссс;
+// 	border-radius: 6px;
+// }
+
+// &::-webkit-scrollbar-thumb {
+// 	background: #000;
+// 	border-radius: 6px;
+// }

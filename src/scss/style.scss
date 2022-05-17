@@ -1,0 +1,29 @@
+
+@import 'settings/fonts';
+@import 'settings/vars';
+@import 'settings/mixins';
+@import 'settings/normalize';
+@import 'settings/global';
+@import 'settings/common';
+
+
+
+
+
+
+//-----components-----
+// @import 'components/burger';
+@import 'components/nav';
+@import 'components/menu';
+@import 'components/burger';
+@import 'components/intro';
+@import 'components/slider';
+@import 'components/benefits';
+@import 'components/category';
+@import 'components/popular';
+@import 'components/footer';
+
+@import 'components/catalog-grid';
+@import 'components/product';
+@import 'components/productModal';
+

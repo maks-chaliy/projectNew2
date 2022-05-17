@@ -1,0 +1,81 @@
+//класс для удаления скролла при открытом меню
+.stop-scroll {
+	overflow: hidden;
+}
+
+//=============/=============/=============
+.burger {
+	position: fixed;
+	z-index: 110;
+	right: var(--offset-huge);
+	top: var(--offset-small);
+	z-index: 110;
+	width: 84px;
+	height: 44px;
+	border: var(--block-border);
+	background-color: transparent;
+	box-shadow: var(--block-shadow);
+	border-radius: var(--block-radius);
+	cursor: pointer;
+	display: none;
+
+	@include tablet-max {
+		display: block;
+	}
+
+	@include mobile {
+		right: var(--offset-small);
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 44px;
+		height: 2px;
+		background-color: var(--black-color);
+		transform: translateY(-8px) translateX(-50%);
+		transition: transform 0.3s linear;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 44px;
+		height: 2px;
+		background-color: var(--black-color);
+		transform: translateY(8px) translateX(-50%);
+		transition: transform 0.3s, width 0.3s linear;
+	}
+
+	&__line {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%);
+		width: 24px;
+		height: 2px;
+		background-color: var(--black-color);
+		transition: all 0.3s linear;
+		transition: opacity 0.3s, swidth 0.3s linear;
+	}
+}
+
+.burger--active {
+	.burger__line {
+		opacity: 0;
+	}
+}
+
+.burger--active::before {
+	transform: translateY(0px) translateX(-50%) rotate(45deg);
+	width: 24px;
+}
+
+.burger--active::after {
+	transform: translateY(0px) translateX(-50%) rotate(-45deg);
+	width: 24px;
+}

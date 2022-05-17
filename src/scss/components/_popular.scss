@@ -1,0 +1,14 @@
+//=============/=============/=============
+.popular {
+	position: relative;
+	margin-left: var(--offset-left);
+
+	@include tablet-max {
+		margin-left: 0;
+	}
+
+	&__title {
+		font-size: 46px;
+		margin-bottom: var(--offset-large);
+	}
+}

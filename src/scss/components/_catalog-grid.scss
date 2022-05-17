@@ -1,0 +1,20 @@
+//=============/=============/=============
+.catalog-grid {
+	margin-left: var(--offset-left);
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: var(--offset-small);
+
+	@include tablet-max {
+		margin-left: 0;
+	}
+
+	@include tablet {
+		grid-template-columns: repeat(8, 1fr);
+		gap: var(--offset-minimum);
+	}
+
+	@include mobile-min {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
